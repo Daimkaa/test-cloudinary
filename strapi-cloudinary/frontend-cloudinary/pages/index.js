@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Query from "../components/query";
 import POSTS_QUERY from "../apollo/queries/posts/posts";
 import Image from 'next/image'
+import React from 'react'
 import useSWR from 'swr'
 
 export default function Home() {
