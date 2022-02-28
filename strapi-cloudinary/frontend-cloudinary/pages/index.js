@@ -3,8 +3,6 @@ import styles from '../styles/Home.module.css'
 import Query from "../components/query";
 import POSTS_QUERY from "../apollo/queries/posts/posts";
 import Image from 'next/image'
-import React from 'react'
-import useSWR from 'swr'
 
 export default function Home() {
   return (
@@ -20,8 +18,6 @@ export default function Home() {
                 <title>Create Next App</title>
                 <link rel="icon" href="/favicon.ico" />
               </Head>
-            
- 
               <main className={styles.main}>
                 <h1 className={styles.title}>
                   Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -31,7 +27,6 @@ export default function Home() {
                   <code className={styles.code}>pages/index.js</code>
                 </p>
                 <div className = {styles.grid}> 
-                 
                   {coder.map((post) => (
                     
                       <div className = {styles.card}>
@@ -39,10 +34,8 @@ export default function Home() {
                           <Image src = {post.attributes.cover.data.attributes.url} width={150} height={150}></Image>
                         </div>
                         <h1>{post.attributes.title}</h1>
-                       
                       </div>
-                    
-                 ))}
+                      ))}
                 </div>
               </main>
               <footer className={styles.footer}>
